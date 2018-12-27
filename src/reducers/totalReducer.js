@@ -3,11 +3,9 @@ const INCREMENT = "INCREMENT";
 let reducerTotal = (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return state + 1;
-      break;
+      return state + 1
     default:
-      return state;
-      break;
+      return state
   }
 };
 

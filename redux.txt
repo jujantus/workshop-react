@@ -1,0 +1,51 @@
+react-redux = Provider | connect
+
+let initiaState = {
+    profile : {},
+    products : [],
+    questions : []
+}
+
+// reducers/profileReducer.js
+
+let profileReducer = function (state = {}, action){
+    return state
+}
+
+let productsReducer = function (state = [], action){
+    return state
+}
+
+let questionsReducer = function (state = [], action){
+    return state
+}
+
+
+let rootReducer = redux.combineReducers({
+    profile : profileReducer,
+    products : productsReducer,
+    questions : questionsReducer
+})
+
+redux.createStore(rootReducer)
+
+// EN EL INDEX.JS
+let store = createStore(rootReducer)
+
+
+// REDUX connect
+
+class Article extends Component {
+    render(){
+        <div>
+            <p>
+                Filtrar por:
+                <button onClick ={this.props.filterRecent}>Mas recientes</button>
+            </p>
+            {}
+        </div>
+    }
+}
+
+export default connect(function () {}, function () {})(Article) /// 
+export default connect(mapStateToProps, MapDispatchToProps)(Article)
